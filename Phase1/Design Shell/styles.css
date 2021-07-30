@@ -1,0 +1,34 @@
+header{
+  background-color: black;
+}
+h4{
+  color: white;
+}
+#name{
+  text-align: left;
+}
+#trademark{
+  text-align: right;
+}
+h1{
+  color: white;
+}
+h3{
+  color: white;
+  text-align: center;
+}
+div
+  .links{text-align: center}
+  .row1{ border: solid 1px gold}
+
+p{
+  font-style: italic;
+}
+th{
+  text-align: center;
+}
+table#headertable, th{
+  border: 1px solid white;
+  table-layout: fixed;
+  width: 100%;
+}
