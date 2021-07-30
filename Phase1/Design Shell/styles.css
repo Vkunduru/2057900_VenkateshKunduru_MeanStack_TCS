@@ -1,6 +1,17 @@
 header{
   background-color: black;
 }
+
+h1{
+  color: white;
+}
+h2{
+  color: grey;
+}
+h3{
+  color: white;
+  text-align: center;
+}
 h4{
   color: white;
 }
@@ -10,13 +21,13 @@ h4{
 #trademark{
   text-align: right;
 }
-h1{
+h5{
   color: white;
 }
-h3{
-  color: white;
-  text-align: center;
+h6{
+  color: grey;
 }
+
 div
   .links{text-align: center}
   .row1{ border: solid 1px gold}
