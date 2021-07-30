@@ -42,3 +42,11 @@ table#headertable, th{
   table-layout: fixed;
   width: 100%;
 }
+footer{
+  font-style: normal;
+  text-align: center;
+  background-color: black;
+}
+#footerp{
+  color: white;
+}
