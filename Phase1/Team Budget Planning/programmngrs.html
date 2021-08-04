@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <script src="session.js"></script>
+
+    <style media="screen">
+
+      h1{
+        width: 100%;
+        text-align: center;
+      }
+      div{
+        padding: 50px;
+        text-align: center;
+        width: 60%;
+        margin: auto;
+      }
+      a{
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Program Managers</h1>
+    <div class="" style= "border: 2px solid black">
+
+      <h3>Add New Budget</h3>
+
+      <form id="BudgetForm" method="post">
+        <label>Client Name</label><br/>
+        <input type="text" name="client_name">
+        <p></p>
+        <br/>
+
+        <label>Project Name</label><br/>
+        <input type="text" name="project_name">
+        <p></p>
+        <br/>
+
+        <label>Budget</label><br/>
+        <input type="number" name="budget">
+        <p></p>
+
+        <button type="button" name="submitbutton" onclick="addBudget()">Add</button>
+        <button type="reset" name="resetbutton" onclick=>Clear</button>
+
+      </form>
+      <a href="main.html">Back</a>
+
+
+
+    </div>
+  </body>
+</html>
