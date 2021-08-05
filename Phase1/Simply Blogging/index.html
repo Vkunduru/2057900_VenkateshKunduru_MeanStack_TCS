@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Simply Blogging</title>
+    <script type="text/javascript" src="createBlogs.js">
+    </script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style media="screen">
+      .blogform{
+        width: 70%;
+        margin: auto;
+        border: 1px solid black;
+      }
+      .blogspace{
+        width: 90%;
+        margin: auto;
+        border: 1px solid black;
+      }
+      h1{
+        text-align: center;
+      }
+      #addblogbtn{
+        width: 30%;
+        margin: 15px auto;
+      }
+      textarea{
+        width: 80%;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="blogform container" id="blogform">
+
+      <h1>Simply Blogging</h1>
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+          <div class="navbar-nav ">
+            <a class="nav-item nav-link" href="#">Home</a>
+            <a class="nav-item nav-link" href="#">About Us</a>
+            <a class="nav-item nav-link" href="#">Contacts</a>
+          </div>
+        </div>
+      </nav>
+
+      <form class="" method="get">
+        <label>Title</label>
+        <input type="text" class="form-control" id="articletitle" value="" required>
+        <br>
+        <label>Articles</label>
+        <textarea rows="5" cols="80" class="form-control" id="articletext" required></textarea>
+        <br>
+        <label>Add Image URL</label>
+        <input type="text" class="form-control" id="articleimg" name="img">
+        <input type="button" class="form-control btn-success" id="addblogbtn" onclick="addBlog()" name="" value="Add Blog">
+
+      </form>
+    </div>
+
+    <div class="container-fluid" style = "margin: auto; width= 100%">
+      <div class="row" id="blogspace">
+
+
+      </div>
+     </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
