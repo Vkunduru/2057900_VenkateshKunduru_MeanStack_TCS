@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop for Goods</title>
+    <style>
+        body{
+            text-align: center;
+            width: 70%;
+            margin: auto;
+        }
+        p{
+            font-size: 20px;
+        }
+        a{
+            font-size: 20px;
+        }
+        .item{
+            border: 2px solid black;
+            margin: 15px;
+            width: 300px;
+            height: 500px;
+        }
+        #row1{
+            display: inline-block;
+            
+        }
+        #row2{
+            display: inline-block;
+            
+        }
+    </style>
+</head>
+<body>
+    <h2>Shop</h2>
+    <div>
+        <p>Cart Size: <span id="cart-size">0</span> </p>
+        
+        <a href="./cart.html">Checkout</a>
+    </div>
+
+    <div id="row1">
+        <div class=item id="item1">
+            <label> Cat</label> <br>
+            <label> $150</label>
+            <img src="https://cdn.mos.cms.futurecdn.net/vChK6pTy3vN3KbYZ7UU7k3.jpg" alt="" style="width:300px; height:300px">
+            <hr>
+            <button id="add1">Add to Cart</button>
+        </div>
+        <div class=item id="item2">
+            <label> Dog</label> <br>
+            <label> $150</label>
+            <img src="https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg" alt="" style="width:300px; height:300px">
+            <hr>
+            <button id="add2">Add to Cart</button>
+        </div>
+    </div>
+    
+    <div id="row2">
+        <div class=item id="item3">
+            <label> CatDog</label> <br>
+            <label> $1000</label>
+            <img src="https://upload.wikimedia.org/wikipedia/en/6/64/CatDog.jpeg" alt="" style="width:300px; height:300px">
+            <hr>
+            <button id="add3">Add to Cart</button>
+        </div>
+        <div class=item id="item4">
+            <label> Billy</label> <br>
+            <label> $5</label>
+            <img src="https://static.wikia.nocookie.net/grimadventures/images/2/26/Billy2.png/revision/latest?cb=20181231091654" alt="" style="width:300px;height:300px">
+            <hr>
+            <button id="add4">Add to Cart</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
