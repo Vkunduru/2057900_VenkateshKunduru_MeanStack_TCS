@@ -1,0 +1,58 @@
+<div>
+  <h2>Welcome to This Website</h2>
+  <hr/>
+
+    <div *ngIf="log">
+        <h2>Login Page </h2>
+        <form [formGroup]="loginRef" (ngSubmit) = validateUser()>
+          <label>UserName</label>
+          <input type="text" formControlName="username" /><br />
+          <label>Password</label>
+          <input type="password" formControlName="password"/><br />
+
+          <input type="submit" value="Submit">
+          <button (click)= showRegPage()>Register</button>
+        </form>
+        {{msg}}
+    </div>
+
+    <div *ngIf="reg">
+      <h2>Registration Page </h2>
+      <form [formGroup]="regRef" (ngSubmit) = addUser()>
+
+        <label>First Name</label>
+        <input type="text" formControlName="firstname" /><br />
+        <label>Last Name</label>
+        <input type="text" formControlName="lastname"/><br />
+
+        <label>UserName</label>
+        <input type="text" formControlName="uname" /><br />
+        <label>Password</label>
+        <input type="password" formControlName="pwd" /><br />
+
+        <input type='submit' value="Register">
+        <input type="reset" value="Reset">
+        <button (click)=showLoginPage()>Back</button>
+      </form>
+    </div>
+
+    <div *ngIf="prof">
+      {{msg2}}
+      <button (click)=showLoginPage()>Sign Out</button>
+
+      <form [formGroup]="contactRef" (ngSubmit)=addContact()>
+        <label>Contact Name</label>
+        <input type="text" formControlName="contactname" /><br />
+        <label>Phone Number</label>
+        <input type="text" formControlName="phonenumber" /><br />
+
+        <input type='submit' value="Add Contact">
+        <input type="reset" value="Reset">
+      </form>
+
+      <button (click)=showContacts()>Contact Details</button>
+      <div id="contactdeets">****</div>
+
+    </div>
+
+</div>
