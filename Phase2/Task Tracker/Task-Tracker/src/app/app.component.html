@@ -1,0 +1,34 @@
+<h2>Task Tracker</h2>
+
+<div id="tasksform">
+  <h3>Add Task</h3>
+  <form #taskRef="ngForm" (ngSubmit)=addTask(taskRef)>
+
+    <mat-label>ID</mat-label><br/>
+    <input matInput name="id" placeholder="id" ngModel/>
+    <br/>
+
+    <mat-label>Name</mat-label><br />
+    <input matInput name="name" placeholder="name" ngModel/>
+    <br />
+
+    <mat-label>Task</mat-label><br />
+    <input matInput name="taskname" placeholder="task" ngModel/>
+    <br />
+
+    <mat-label>Deadline</mat-label><br />
+    <input type='date' matInput name="deadline" placeholder="dd/mm/yyyy" ngModel/>
+    <br />
+    <br />
+    
+    <button mat-raised-button color="accent" type="submit">Submit</button>
+    <button mat-raised-button color="primary" type="reset">Reset</button>
+
+  </form>
+  <br />
+
+</div>
+
+<div id="taskslist">
+ 
+</div>

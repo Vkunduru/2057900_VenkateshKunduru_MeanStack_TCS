@@ -1,0 +1,21 @@
+h2{
+    text-align: center;
+    background-color: burlywood;
+    padding: 20px;
+    margin-top: 0px;
+}
+
+div{
+    width: 50%;
+    margin: auto;
+    padding: 50px;
+    border: 1px solid pink;
+}
+
+button{
+    margin-right: 10px;
+}
+
+#tasksform{
+    text-align: center;
+}
