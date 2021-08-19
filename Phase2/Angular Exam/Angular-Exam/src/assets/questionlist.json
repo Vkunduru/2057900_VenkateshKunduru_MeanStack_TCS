@@ -1,0 +1,82 @@
+[
+    {
+        "quest":"1+1",
+        "ans1":"0",
+        "ans2": "1",
+        "ans3": "2",
+        "ans4": "3",
+        "correctAns": "2"
+    },
+    {
+        "quest": "Command to convert Typescript file to Javascript",
+        "ans1": "npm",
+        "ans2": "code",
+        "ans3": "convert",
+        "ans4": "tsc",
+        "correctAns": "tsc"
+    },
+    {
+        "quest": "1x1",
+        "ans1": "0",
+        "ans2": "1",
+        "ans3": "4",
+        "ans4": "5",
+        "correctAns": "1"
+    },
+    {
+        "quest": "What color is a red panda",
+        "ans1": "black",
+        "ans2": "white",
+        "ans3": "red",
+        "ans4": "green",
+        "correctAns": "red"
+    },
+    {
+        "quest": "What happens when the sun is out and it rains",
+        "ans1": "waterfall",
+        "ans2": "tsunami",
+        "ans3": "hurricane",
+        "ans4": "rainbow",
+        "correctAns": "rainbow"
+    },
+    {
+        "quest": "3-3",
+        "ans1": "0",
+        "ans2": "1",
+        "ans3": "2",
+        "ans4": "3",
+        "correctAns": "0"
+    },
+    {
+        "quest": "What color is a black bear",
+        "ans1": "black",
+        "ans2": "blue",
+        "ans3": "red",
+        "ans4": "white",
+        "correctAns": "black"
+    },
+    {
+        "quest": "What color is a brown bear",
+        "ans1": "brown",
+        "ans2": "white",
+        "ans3": "yellow",
+        "ans4": "burlywood",
+        "correctAns": "brown"
+    },
+    {
+        "quest": "What language styles webpages",
+        "ans1": "HTML",
+        "ans2": "CSS",
+        "ans3": "JAVASCRIPT",
+        "ans4": "ANGULAR",
+        "correctAns": "CSS"
+    },
+    {
+        "quest": "What do you add to your angular project to render it offline",
+        "ans1": "node",
+        "ans2": "material",
+        "ans3": "httpmodule",
+        "ans4": "pwa",
+        "correctAns": "pwa"
+    }
+]

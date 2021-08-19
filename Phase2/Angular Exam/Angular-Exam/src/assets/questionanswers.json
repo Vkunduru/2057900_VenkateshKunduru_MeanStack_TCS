@@ -1,0 +1,42 @@
+[
+    {
+        "quest": "1+1",
+        "correctAns": "2"
+    },
+    {
+        "quest": "Command to convert Typescript file to Javascript",
+        "correctAns": "tsc"
+    },
+    {
+        "quest": "1x1",
+        "correctAns": "1"
+    },
+    {
+        "quest": "What color is a red panda",
+        "correctAns": "red"
+    },
+    {
+        "quest": "What happens when the sun is out and it rains",
+        "correctAns": "rainbow"
+    },
+    {
+        "quest": "3-3",
+        "correctAns": "0"
+    },
+    {
+        "quest": "What color is a black bear",
+        "correctAns": "black"
+    },
+    {
+        "quest": "What color is a brown bear",
+        "correctAns": "brown"
+    },
+    {
+        "quest": "What language styles webpages",
+        "correctAns": "CSS"
+    },
+    {
+        "quest": "What do you add to your angular project to render it offline",
+        "correctAns": "pwa"
+    }
+]
