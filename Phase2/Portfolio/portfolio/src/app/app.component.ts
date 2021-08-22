@@ -44,7 +44,6 @@ export class AppComponent {
 
   
   accounts:creds[] = [];
-  contacts: contactdetails[] = [];
 
   // credentials:creds = {}
   // //should check against a value in local storage
@@ -82,8 +81,6 @@ export class AppComponent {
     var user = this.loginRef.value;
     var showmsg:boolean = true;
 
-    console.log(this.accounts);
-
     this.accounts.forEach(cred => { 
       if (cred.username == user.username && cred.password == user.password) {
         window.sessionStorage.setItem('user', user.username);
@@ -101,19 +98,21 @@ export class AppComponent {
   addContact(){
     var contact = this.contactRef.value;
     let uname = window.sessionStorage.getItem('user');
+    let contacts: contactdetails[] = [];
+
     var addnewcontact:contactdetails = {contactname: contact.contactname, phonenumber: contact.phonenumber};
     
     let objname: string = `contcs-${uname}`;
     var obj = window.sessionStorage.getItem(objname);
 
     if (obj == null) {
-      this.contacts.push(addnewcontact);
-      window.sessionStorage.setItem(objname, JSON.stringify(this.contacts));
+      contacts.push(addnewcontact);
+      window.sessionStorage.setItem(objname, JSON.stringify(contacts));
     }
     else {
-      this.contacts = JSON.parse(obj);
-      this.contacts.push(addnewcontact);
-      window.sessionStorage.setItem(objname, JSON.stringify(this.contacts));
+      contacts = JSON.parse(obj);
+      contacts.push(addnewcontact);
+      window.sessionStorage.setItem(objname, JSON.stringify(contacts));
     }
   }
 
@@ -121,20 +120,21 @@ export class AppComponent {
 
     let uname = window.sessionStorage.getItem('user');
     let objname:string = `contcs-${uname}`;
-    this.contacts = [];
+    let contacts: contactdetails[] = [];
+
     console.log(objname);
     let obj1 = window.sessionStorage.getItem(objname);
     console.log(obj1);
 
     if( obj1 != null){
-      this.contacts = JSON.parse(obj1);
+      contacts = JSON.parse(obj1);
     }
 
     var tableContent: string = "";
     var headerTable: string = "<table border=1 style= 'margin: auto'> <tr> <th>Contact Name</th> <th>Phone Number</th> </tr>";
 
-    if (this.contacts != null) {
-      this.contacts.forEach((element) => {
+    if (contacts != null) {
+      contacts.forEach((element) => {
         tableContent = tableContent + "<tr><td>" + element.contactname + "</td><td>" + element.phonenumber + "</td></tr>";
       });
     }
@@ -151,12 +151,14 @@ export class AppComponent {
       this.log = false;
       this.reg = true;
       this.prof = false;
+      this.regRef.reset()
   }
 
   showLoginPage(){
     this.log = true;
     this.reg = false;
     this.prof = false;
+    this.loginRef.reset();
   }
 
   showProfilePage(){
@@ -167,5 +169,6 @@ export class AppComponent {
     this.log = false;
     this.reg = false;
     this.prof = true;
+    this.contactRef.reset();
   }
 }
