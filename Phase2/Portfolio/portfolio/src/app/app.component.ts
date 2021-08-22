@@ -44,7 +44,7 @@ export class AppComponent {
 
   
   accounts:creds[] = [];
-  contacts:contactdetails[] = [];
+  contacts: contactdetails[] = [];
 
   // credentials:creds = {}
   // //should check against a value in local storage
@@ -55,16 +55,16 @@ export class AppComponent {
     var newUser = this.regRef.value;
 
     var addnewuser:creds = {username: newUser.uname , password: newUser.pwd};
-    var obj = window.localStorage.getItem("accs");
+    var obj = window.sessionStorage.getItem("accs");
 
     if( obj == null){
       this.accounts.push(addnewuser);
-      window.localStorage.setItem("accs", JSON.stringify(this.accounts));
+      window.sessionStorage.setItem("accs", JSON.stringify(this.accounts));
     }
     else{
       this.accounts = JSON.parse(obj);
       this.accounts.push(addnewuser); 
-      window.localStorage.setItem("accs", JSON.stringify(this.accounts));
+      window.sessionStorage.setItem("accs", JSON.stringify(this.accounts));
     }
 
     this.log = true;
@@ -86,7 +86,7 @@ export class AppComponent {
 
     this.accounts.forEach(cred => { 
       if (cred.username == user.username && cred.password == user.password) {
-        window.localStorage.setItem('user', user.username);
+        window.sessionStorage.setItem('user', user.username);
         this.showProfilePage();
         showmsg = false;
       }
@@ -100,26 +100,32 @@ export class AppComponent {
 
   addContact(){
     var contact = this.contactRef.value;
-
+    let uname = window.sessionStorage.getItem('user');
     var addnewcontact:contactdetails = {contactname: contact.contactname, phonenumber: contact.phonenumber};
-
-    var obj = window.localStorage.getItem("contcs");
+    
+    let objname: string = `contcs-${uname}`;
+    var obj = window.sessionStorage.getItem(objname);
 
     if (obj == null) {
       this.contacts.push(addnewcontact);
-      window.localStorage.setItem("contcs", JSON.stringify(this.contacts));
+      window.sessionStorage.setItem(objname, JSON.stringify(this.contacts));
     }
     else {
       this.contacts = JSON.parse(obj);
       this.contacts.push(addnewcontact);
-      window.localStorage.setItem("contcs", JSON.stringify(this.contacts));
+      window.sessionStorage.setItem(objname, JSON.stringify(this.contacts));
     }
   }
 
   showContacts(){
 
-    var obj1 = window.localStorage.getItem("contcs");
-    
+    let uname = window.sessionStorage.getItem('user');
+    let objname:string = `contcs-${uname}`;
+    this.contacts = [];
+    console.log(objname);
+    let obj1 = window.sessionStorage.getItem(objname);
+    console.log(obj1);
+
     if( obj1 != null){
       this.contacts = JSON.parse(obj1);
     }
@@ -155,7 +161,7 @@ export class AppComponent {
 
   showProfilePage(){
 
-    var user = window.localStorage.getItem("user");
+    var user = window.sessionStorage.getItem("user");
     this.msg2 = `Welcome ${user}`;
 
     this.log = false;
