@@ -5,10 +5,11 @@ let details = [];
 
 let fname = rl.question("Enter the first name: ");
 let lname = rl.question("Enter the last name: ");
-let id = rl.question("Enter the id: ");
+let gendr = rl.question("Enter the gender: ");
+let em = rl.questionEMail("Enter the email: ");
 let date = new Date().toString();
 debugger;
-let obj = {firstname: fname, lastname: lname, eid: id, timestamp: date};
+let obj = {firstname: fname, lastname: lname, gender: gendr, email: em, timestamp: date};
 
 details = JSON.parse( fs.readFileSync("logrecords.json").toString() );
 details.push(obj);
