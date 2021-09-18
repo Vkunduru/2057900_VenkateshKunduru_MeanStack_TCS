@@ -1,3 +1,13 @@
+
+GIT HUB REPOSITORY LINK:
+https://github.com/Vkunduru/2057900_VenkateshKunduru_MeanStack_TCS/blob/master/Phase4/JenkinsPipeline/JenkinsPipeline.txt
+
+GIT FILE PATH:
+
+2057900_VenkateshKunduru_MeanStack_TCS/Phase4/JenkinsPipeline/ *
+
+
+
 pipeline {
     agent any
     stages {
